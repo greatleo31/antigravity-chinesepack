@@ -1,0 +1,22 @@
+[
+    {
+        "pattern": "^([0-9]+) agents? running$",
+        "replace": "$1 个智能体正在运行"
+    },
+    {
+        "pattern": "^([0-9]+) files? changed$",
+        "replace": "$1 个文件已更改"
+    },
+    {
+        "pattern": "^([0-9]+) files? modified$",
+        "replace": "$1 个文件已修改"
+    },
+    {
+        "pattern": "^Open workspace: (.+)$",
+        "replace": "打开工作区：$1"
+    },
+    {
+        "pattern": "^Model quota resets in (.+)$",
+        "replace": "模型配额将在 $1 后重置"
+    }
+]
