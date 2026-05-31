@@ -172,6 +172,12 @@ def build_injection_js():
     for (const [k, v] of map.entries()) lowerMap.set(k.toLowerCase(), v);
     const longEntries = {entries_json};
     const patternEntries = {patterns_json}.map(item => [new RegExp(item.pattern), item.replace]);
+    const partialEntries = longEntries
+        .filter(([key]) => key.length > 20)
+        .map(([key, translated]) => [
+            new RegExp(key.replace(/[.*+?^${{}}()|[\\]\\\\]/g, '\\$&').replace(/\\s+/g, '\\s+'), 'g'),
+            translated,
+        ]);
     const ignoredWords = new Set({ignored_json}.map(x => String(x).toLowerCase()));
     const done = new WeakSet();
     const untranslated = new Set();
@@ -247,8 +253,8 @@ def build_injection_js():
         }}
 
         let next = text;
-        for (const [key, translated] of longEntries) {{
-            if (key.length > 20 && next.includes(key)) next = next.split(key).join(translated);
+        for (const [pattern, translated] of partialEntries) {{
+            if (pattern.test(next)) next = next.replace(pattern, translated);
         }}
         return next !== text ? next : original;
     }}
