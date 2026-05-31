@@ -1,5 +1,7 @@
 # Antigravity 智能管理器中文语言包
 
+[中文](./README.md) | [English](./README_EN.md)
+
 [![GitHub Repo stars](https://img.shields.io/github/stars/greatleo31/antigravity-chinesepack?style=flat-square)](https://github.com/greatleo31/antigravity-chinesepack/stargazers)
 [![GitHub issues](https://img.shields.io/github/issues/greatleo31/antigravity-chinesepack?style=flat-square)](https://github.com/greatleo31/antigravity-chinesepack/issues)
 [![GitHub last commit](https://img.shields.io/github/last-commit/greatleo31/antigravity-chinesepack?style=flat-square)](https://github.com/greatleo31/antigravity-chinesepack/commits/main)
@@ -13,11 +15,21 @@
 > **这是一个面向普通用户也能直接使用的 Antigravity 中文语言包项目。**  
 > 目标是：安装更简单、汉化更自然、出错更容易定位、协作更方便。
 
+## 为什么值得关注
+
+- **不是一次性脚本**：已经补齐安装、还原、诊断、检查、协作模板、工作流等完整基础设施
+- **兼容两类结构**：同时支持旧版 `resources/app` 与新版 `app.asar`
+- **更适合长期维护**：有 `CHANGELOG.md`、`RELEASE_CHECKLIST.md`、`STAGE_SUMMARY.md`、`NEXT_STEPS.md`
+- **对普通用户友好**：Windows / macOS 都有可直接使用的入口脚本
+- **欢迎继续共建**：可直接提翻译建议、功能建议、兼容性反馈或 PR
+
 ---
 
 ## 快速开始
 
-### Windows
+### 三步完成安装
+
+#### Windows
 
 1. 关闭 Antigravity
 2. 双击 `ZhuRu_HanHua.bat`
@@ -25,7 +37,7 @@
 
 > 如果系统里没有 `python` 命令，但安装了 Python Launcher，脚本也会自动尝试使用 `py -3`。
 
-### macOS
+#### macOS
 
 1. 关闭 Antigravity
 2. 首次执行前先运行：
@@ -59,6 +71,13 @@ chmod +x "ZhuRu_HanHua.command" "QingChu_HanHua.command"
   - 界面英文较多、不方便日常使用
   - 长文案漏翻或术语不统一
   - 不同系统、不同安装环境下的安装成功率问题
+
+## 适合谁使用
+
+- 想直接把 Antigravity Agent Manager 切换为更自然中文界面的普通用户
+- 想快速安装、快速回滚、不想手动改文件的用户
+- 想补翻译、修文案、做兼容性验证的贡献者
+- 想长期维护这个仓库、持续迭代开源项目的协作者
 
 ## 已知限制
 
