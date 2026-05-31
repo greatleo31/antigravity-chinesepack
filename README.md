@@ -395,6 +395,7 @@ python "AntigravityHanHua_GongJu.py" --install-dir "C:\Users\你的用户名\App
 | `QingChu_HanHua.command` | macOS 还原入口 |
 | `dicts/` | 翻译词典、正则模板和忽略词表 |
 | `CONTRIBUTING.md` | 贡献说明 |
+| `SECURITY.md` | 安全问题反馈说明 |
 | `.github/` | Issue / PR 模板与词典检查工作流 |
 | `LICENSE` | 开源许可证 |
 | `CHANGELOG.md` | 更新日志 |
@@ -412,6 +413,7 @@ python "AntigravityHanHua_GongJu.py" --install-dir "C:\Users\你的用户名\App
 - 提交 PR 一起完善汉化质量
 - 阅读 `CONTRIBUTING.md` 后参与协作
 - 通过 Issue 反馈兼容性问题、功能建议或翻译建议
+- 遇到潜在安全问题时，优先参考 `SECURITY.md`
 
 ---
 

@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 使用说明 / 常见问题
+    url: https://github.com/greatleo31/antigravity-chinesepack#readme
+    about: 先查看 README 中的安装、诊断、常见问题与贡献说明。
+  - name: 贡献说明
+    url: https://github.com/greatleo31/antigravity-chinesepack/blob/main/CONTRIBUTING.md
+    about: 提交翻译建议、功能建议或 PR 前，先阅读贡献说明。
