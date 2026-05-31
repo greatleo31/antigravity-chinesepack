@@ -15,5 +15,13 @@
     "npx",
     "app.asar",
     "preload.js",
-    "Antigravity"
+    "Antigravity",
+    "JavaScript",
+    "Chrome",
+    "Chromium",
+    "CDP",
+    "GCP",
+    "PowerShell",
+    "Unix shell",
+    "Cascade ID"
 ]

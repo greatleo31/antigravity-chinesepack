@@ -32,6 +32,14 @@
         "replace": "$1 个模型"
     },
     {
+        "pattern": "^([0-9]+) resources?$",
+        "replace": "$1 个资源"
+    },
+    {
+        "pattern": "^([0-9]+) MCP servers?$",
+        "replace": "$1 个 MCP 服务器"
+    },
+    {
         "pattern": "^Open workspace: (.+)$",
         "replace": "打开工作区：$1"
     },
@@ -56,8 +64,24 @@
         "replace": "$1 后刷新"
     },
     {
-        "pattern": "^Loading (.+)\\.\\.\\.$",
-        "replace": "正在加载 $1..."
+        "pattern": "^Loading MCP servers\\.\\.\\.$",
+        "replace": "正在加载 MCP 服务器..."
+    },
+    {
+        "pattern": "^Loading knowledge items\\.\\.\\.$",
+        "replace": "正在加载知识条目..."
+    },
+    {
+        "pattern": "^Failed to load MCP servers$",
+        "replace": "加载 MCP 服务器失败"
+    },
+    {
+        "pattern": "^Failed to load knowledge items$",
+        "replace": "加载知识条目失败"
+    },
+    {
+        "pattern": "^No resources available$",
+        "replace": "暂无可用资源"
     },
     {
         "pattern": "^([0-9]+) days?$",

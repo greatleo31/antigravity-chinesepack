@@ -14,6 +14,7 @@
 - 继续润色 `dicts/page_settings.json` 中多处高频设置说明文案
 - 补强 `dicts/common.json` 与 `dicts/page_mcp_knowledge.json` 的通用状态、MCP 服务器和知识库相关文案
 - 清理设置页中 allow/deny list、Lint、浏览器与配额说明的术语和语气不一致问题
+- 补充 JavaScript、MCP 服务器、资源计数、通用连接/安装操作等高频动态和通用词条
 - 更新中英文 README，进一步强调直接运行主脚本，并补充术语表、收集流程与 AI 辅助翻译说明
 
 ## 2026-05

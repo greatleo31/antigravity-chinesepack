@@ -71,5 +71,15 @@
     "Enabled": "已启用",
     "Disabled": "已禁用",
     "Connected": "已连接",
-    "Disconnected": "已断开连接"
+    "Disconnected": "已断开连接",
+    "Connect": "连接",
+    "Disconnect": "断开连接",
+    "Install": "安装",
+    "Uninstall": "卸载",
+    "Update": "更新",
+    "Search": "搜索",
+    "Add": "添加",
+    "Remove": "移除",
+    "Open": "打开",
+    "Retrying...": "正在重试..."
 }

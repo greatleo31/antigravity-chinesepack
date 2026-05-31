@@ -30,5 +30,12 @@
     "Open Configuration": "打开配置",
     "Edit Configuration": "编辑配置",
     "Failed to load MCP servers": "加载 MCP 服务器失败",
-    "Failed to load knowledge items": "加载知识条目失败"
+    "Failed to load knowledge items": "加载知识条目失败",
+    "Install MCP Server": "安装 MCP 服务器",
+    "Uninstall MCP Server": "卸载 MCP 服务器",
+    "MCP Server Details": "MCP 服务器详情",
+    "MCP Server Configuration": "MCP 服务器配置",
+    "Reload MCP Servers": "重新加载 MCP 服务器",
+    "Connected MCP Servers": "已连接的 MCP 服务器",
+    "Disconnected MCP Servers": "已断开连接的 MCP 服务器"
 }
