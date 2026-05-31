@@ -104,6 +104,7 @@ chmod +x "ZhuRu_HanHua.command" "QingChu_HanHua.command"
 - **精确词典翻译**：适合按钮、菜单、标题等稳定文本
 - **正则模板翻译**：适合带数字、文件名、路径等变量的文本
 - **长句模糊匹配**：对空格、换行差异更稳，减少长文案漏翻
+- **环境诊断**：可快速检查 Python、npx 与安装目录识别结果
 - **忽略词表**：避免误翻模型名、技术名词、文件名等内容
 - **双平台支持**：Windows 和 macOS 都能直接执行
 - **自动备份**：首次注入时会生成 `.bak` / `.hanhua.bak` 备份文件
@@ -415,6 +416,8 @@ python "AntigravityHanHua_GongJu.py" --install-dir "C:\Users\你的用户名\App
 | `RELEASE_CHECKLIST.md` | 阶段性发布自查清单 |
 | `STAGE_SUMMARY.md` | 当前阶段成果总结 |
 | `NEXT_STEPS.md` | 下一阶段优化方向 |
+| `COMPATIBILITY.md` | 平台与版本兼容性矩阵 |
+| `PROJECT_INTRO.md` | 项目介绍与发布文案示例 |
 | `.github/` | Issue / PR 模板与词典检查工作流 |
 | `LICENSE` | 开源许可证 |
 | `CHANGELOG.md` | 更新日志 |
@@ -440,6 +443,8 @@ python "AntigravityHanHua_GongJu.py" --install-dir "C:\Users\你的用户名\App
 - `CHANGELOG.md`：近期更新与演进方向
 - `STAGE_SUMMARY.md`：当前阶段已完成到什么程度
 - `NEXT_STEPS.md`：后续还可以继续优化什么
+- `COMPATIBILITY.md`：当前兼容性覆盖情况
+- `PROJECT_INTRO.md`：可直接复用的项目介绍文案
 - `.github/workflows/check-dicts.yml`：当前自动化检查能力
 
 ---
