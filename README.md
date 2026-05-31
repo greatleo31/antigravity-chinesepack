@@ -39,6 +39,8 @@ chmod +x "ZhuRu_HanHua.command" "QingChu_HanHua.command"
 
 4. 重新打开 Antigravity
 
+> 如果系统里没有 `python3` 命令，但存在 `python`，脚本也会自动尝试使用 `python`。
+
 ---
 
 ## 项目简介

@@ -1,12 +1,16 @@
-#!/bin/bash
+#!/usr/bin/env bash
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 cd "$SCRIPT_DIR" || exit 1
 
 echo
-if ! command -v python3 >/dev/null 2>&1; then
-  echo "[错误] 未检测到 python3，请先安装 Python 3。"
+if command -v python3 >/dev/null 2>&1; then
+  PYTHON_CMD="python3"
+elif command -v python >/dev/null 2>&1; then
+  PYTHON_CMD="python"
+else
+  echo "[错误] 未检测到 Python 3，请先安装 Python。"
   echo
-  echo "Press Enter to exit..."
+  echo "按回车键退出..."
   read -r _
   exit 1
 fi
@@ -18,7 +22,7 @@ sleep 1
 
 echo
 echo "[2/3] 正在注入汉化核心..."
-python3 "$SCRIPT_DIR/AntigravityHanHua_GongJu.py" "$@"
+"$PYTHON_CMD" "$SCRIPT_DIR/AntigravityHanHua_GongJu.py" "$@"
 status=$?
 
 echo
@@ -31,6 +35,6 @@ else
 fi
 
 echo
-echo "Press Enter to exit..."
+echo "按回车键退出..."
 read -r _
 exit $status
