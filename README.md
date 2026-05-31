@@ -27,34 +27,70 @@
 
 ## 快速开始
 
-### 三步完成安装
+### 推荐方式：直接运行主脚本
 
-#### Windows
+相比 `.bat` / `.command` 包装脚本，**更推荐直接运行 `AntigravityHanHua_GongJu.py`**，兼容性更好，也更方便排错。
 
-1. 关闭 Antigravity
-2. 双击 `ZhuRu_HanHua.bat`
-3. 重新打开 Antigravity
+### Windows
 
-> 如果系统里没有 `python` 命令，但安装了 Python Launcher，脚本也会自动尝试使用 `py -3`。
-
-#### macOS
-
-1. 关闭 Antigravity
-2. 首次执行前先运行：
+先进入当前仓库目录，再执行：
 
 ```bash
-chmod +x "ZhuRu_HanHua.command" "QingChu_HanHua.command"
+py -3 .\AntigravityHanHua_GongJu.py --diagnose
 ```
 
-3. 然后执行：
+如果你的系统没有 `py`，就改用：
 
 ```bash
-./ZhuRu_HanHua.command
+python .\AntigravityHanHua_GongJu.py --diagnose
 ```
 
-4. 重新打开 Antigravity
+诊断通过后，直接安装：
 
-> 如果系统里没有 `python3` 命令，但存在 `python`，脚本也会自动尝试使用 `python`。
+```bash
+py -3 .\AntigravityHanHua_GongJu.py
+```
+
+或：
+
+```bash
+python .\AntigravityHanHua_GongJu.py
+```
+
+### macOS
+
+先进入当前仓库目录，再执行：
+
+```bash
+python3 ./AntigravityHanHua_GongJu.py --diagnose
+```
+
+如果系统里没有 `python3`，可尝试：
+
+```bash
+python ./AntigravityHanHua_GongJu.py --diagnose
+```
+
+诊断通过后，直接安装：
+
+```bash
+python3 ./AntigravityHanHua_GongJu.py
+```
+
+或：
+
+```bash
+python ./AntigravityHanHua_GongJu.py
+```
+
+### 可选：保留一键脚本入口
+
+仓库里仍然保留：
+
+- `ZhuRu_HanHua.command`
+- `QingChu_HanHua.command`
+
+但如果你遇到环境兼容问题，优先改用上面的**直接运行主脚本**方式。
 
 ---
 
@@ -171,36 +207,58 @@ chmod +x "ZhuRu_HanHua.command" "QingChu_HanHua.command"
 
 ## 安装汉化
 
-### Windows
+### 推荐命令
 
-直接双击：
-
-- `ZhuRu_HanHua.bat`
-
-如果 Antigravity 不在默认目录，也可以手动执行：
+Windows：
 
 ```bash
-python "AntigravityHanHua_GongJu.py" --install-dir "D:\Antigravity"
+py -3 .\AntigravityHanHua_GongJu.py
 ```
 
-### macOS
-
-首次使用前，先给脚本执行权限：
+或：
 
 ```bash
-chmod +x "ZhuRu_HanHua.command" "QingChu_HanHua.command"
+python .\AntigravityHanHua_GongJu.py
 ```
 
-然后执行：
+macOS：
 
 ```bash
-./ZhuRu_HanHua.command
+python3 ./AntigravityHanHua_GongJu.py
 ```
 
-如果需要手动指定路径：
+或：
 
 ```bash
-python3 "AntigravityHanHua_GongJu.py" --install-dir "/Applications/Antigravity.app"
+python ./AntigravityHanHua_GongJu.py
+```
+
+### 手动指定安装目录
+
+如果 Antigravity 不在默认目录，也可以手动指定：
+
+Windows：
+
+```bash
+py -3 .\AntigravityHanHua_GongJu.py --install-dir "D:\Antigravity"
+```
+
+或：
+
+```bash
+python .\AntigravityHanHua_GongJu.py --install-dir "D:\Antigravity"
+```
+
+macOS：
+
+```bash
+python3 ./AntigravityHanHua_GongJu.py --install-dir "/Applications/Antigravity.app"
+```
+
+或：
+
+```bash
+python ./AntigravityHanHua_GongJu.py --install-dir "/Applications/Antigravity.app"
 ```
 
 执行完成后，重新启动 Antigravity，打开 Agent Manager 即可查看汉化效果。
@@ -209,30 +267,56 @@ python3 "AntigravityHanHua_GongJu.py" --install-dir "/Applications/Antigravity.a
 
 ## 还原官方原版
 
-### Windows
+### 推荐命令
 
-直接双击：
-
-- `QingChu_HanHua.bat`
-
-或手动执行：
+Windows：
 
 ```bash
-python "AntigravityHanHua_GongJu.py" --huifu --install-dir "D:\Antigravity"
+py -3 .\AntigravityHanHua_GongJu.py --huifu
 ```
 
-### macOS
-
-执行：
+或：
 
 ```bash
-./QingChu_HanHua.command
+python .\AntigravityHanHua_GongJu.py --huifu
 ```
 
-如果需要手动指定路径：
+macOS：
 
 ```bash
-python3 "AntigravityHanHua_GongJu.py" --huifu --install-dir "/Applications/Antigravity.app"
+python3 ./AntigravityHanHua_GongJu.py --huifu
+```
+
+或：
+
+```bash
+python ./AntigravityHanHua_GongJu.py --huifu
+```
+
+### 手动指定安装目录
+
+Windows：
+
+```bash
+py -3 .\AntigravityHanHua_GongJu.py --huifu --install-dir "D:\Antigravity"
+```
+
+或：
+
+```bash
+python .\AntigravityHanHua_GongJu.py --huifu --install-dir "D:\Antigravity"
+```
+
+macOS：
+
+```bash
+python3 ./AntigravityHanHua_GongJu.py --huifu --install-dir "/Applications/Antigravity.app"
+```
+
+或：
+
+```bash
+python ./AntigravityHanHua_GongJu.py --huifu --install-dir "/Applications/Antigravity.app"
 ```
 
 还原时会：
@@ -424,8 +508,6 @@ python "AntigravityHanHua_GongJu.py" --install-dir "C:\Users\你的用户名\App
 | 文件 | 说明 |
 | --- | --- |
 | `AntigravityHanHua_GongJu.py` | 核心逻辑：路径解析、备份、注入、还原、词典检查、环境诊断 |
-| `ZhuRu_HanHua.bat` | Windows 安装入口 |
-| `QingChu_HanHua.bat` | Windows 还原入口 |
 | `ZhuRu_HanHua.command` | macOS 安装入口 |
 | `QingChu_HanHua.command` | macOS 还原入口 |
 | `dicts/` | 翻译词典、正则模板和忽略词表 |

@@ -22,30 +22,70 @@
 
 ## Quick start
 
-### Windows
-1. Close Antigravity
-2. Double-click `ZhuRu_HanHua.bat`
-3. Reopen Antigravity
+### Recommended approach: run the main script directly
 
-> If `python` is unavailable but Python Launcher is installed, the script will automatically try `py -3`.
+Compared with `.bat` / `.command` wrapper scripts, **running `AntigravityHanHua_GongJu.py` directly is recommended** for better compatibility and easier troubleshooting.
+
+### Windows
+1. Open this project directory
+2. Run:
+
+```bash
+py -3 .\AntigravityHanHua_GongJu.py --diagnose
+```
+
+If `py` is unavailable, try:
+
+```bash
+python .\AntigravityHanHua_GongJu.py --diagnose
+```
+
+Then install with:
+
+```bash
+py -3 .\AntigravityHanHua_GongJu.py
+```
+
+or:
+
+```bash
+python .\AntigravityHanHua_GongJu.py
+```
 
 ### macOS
-1. Close Antigravity
-2. Run once before first use:
+1. Open this project directory
+2. Run:
 
 ```bash
-chmod +x "ZhuRu_HanHua.command" "QingChu_HanHua.command"
+python3 ./AntigravityHanHua_GongJu.py --diagnose
 ```
 
-3. Then run:
+If `python3` is unavailable, try:
 
 ```bash
-./ZhuRu_HanHua.command
+python ./AntigravityHanHua_GongJu.py --diagnose
 ```
 
-4. Reopen Antigravity
+Then install with:
 
-> If `python3` is unavailable but `python` exists, the script will automatically try `python`.
+```bash
+python3 ./AntigravityHanHua_GongJu.py
+```
+
+or:
+
+```bash
+python ./AntigravityHanHua_GongJu.py
+```
+
+### Optional wrapper scripts
+
+The repo still includes:
+
+- `ZhuRu_HanHua.command`
+- `QingChu_HanHua.command`
+
+But if you hit compatibility issues, switch to the **direct main-script approach** above.
 
 ## Scope
 
