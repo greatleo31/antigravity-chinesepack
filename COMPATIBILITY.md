@@ -21,7 +21,7 @@
 
 | 组件 | 状态 | 说明 |
 | --- | --- | --- |
-| `python` | 已支持 | Windows / macOS 均可作为可执行入口 |
+| `python` | 已支持 | Windows / macOS 均可直接作为主脚本入口 |
 | `python3` | 已支持 | macOS 优先使用 |
 | `py -3` | 已支持 | Windows 下作为 `python` 不可用时的回退方案 |
 | `npx` | 已依赖 | 新版 `app.asar` 注入需要可用的 Node.js / npm / npx |

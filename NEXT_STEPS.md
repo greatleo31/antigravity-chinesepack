@@ -7,12 +7,18 @@
 1. **继续补充真实界面漏翻**
    - 基于真实使用场景收集未翻译文本
    - 优先补设置页、Agent Manager 首页、工作区切换、对话历史等高频区域
+   - 按 `UNTRANSLATED_REVIEW.md` 的流程做分类和回补
 
 2. **补充更多动态文本规则**
    - 继续完善 `dicts/patterns.json`
    - 重点处理带数字、状态、时间、路径、配额等动态文本
 
-3. **验证更多 Antigravity 版本兼容性**
+3. **把 AI 候选翻译流程跑起来**
+   - 用 `tools/generate_translation_candidates.py` 先生成候选译文
+   - 强制结合 `dicts/glossary.json` 与 `TRANSLATION_STYLE_GUIDE.md`
+   - 保持“AI 出候选，人工定终稿”的节奏
+
+4. **验证更多 Antigravity 版本兼容性**
    - 记录不同版本的 `app.asar` / preload 结构差异
    - 在 README 或 CHANGELOG 中补版本适配说明
 

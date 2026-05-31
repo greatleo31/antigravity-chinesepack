@@ -20,7 +20,7 @@
 - **不是一次性脚本**：已经补齐安装、还原、诊断、检查、协作模板、工作流等完整基础设施
 - **兼容两类结构**：同时支持旧版 `resources/app` 与新版 `app.asar`
 - **更适合长期维护**：有 `CHANGELOG.md`、`RELEASE_CHECKLIST.md`、`STAGE_SUMMARY.md`、`NEXT_STEPS.md`
-- **对普通用户友好**：Windows / macOS 都有可直接使用的入口脚本
+- **对普通用户友好**：推荐直接运行 Python 主脚本，排错路径更清晰
 - **欢迎继续共建**：可直接提翻译建议、功能建议、兼容性反馈或 PR
 
 ---
@@ -82,15 +82,6 @@ python3 ./AntigravityHanHua_GongJu.py
 ```bash
 python ./AntigravityHanHua_GongJu.py
 ```
-
-### 可选：保留一键脚本入口
-
-仓库里仍然保留：
-
-- `ZhuRu_HanHua.command`
-- `QingChu_HanHua.command`
-
-但如果你遇到环境兼容问题，优先改用上面的**直接运行主脚本**方式。
 
 ---
 
@@ -372,6 +363,7 @@ python "AntigravityHanHua_GongJu.py" --diagnose --install-dir "D:\Antigravity"
 ```text
 dicts/
 ├── common.json
+├── glossary.json
 ├── menu_nav.json
 ├── page_agents.json
 ├── page_mcp_knowledge.json
@@ -389,6 +381,18 @@ dicts/
 {
     "Settings": "设置",
     "Agents": "智能体"
+}
+```
+
+### `glossary.json`
+
+用于统一核心术语，避免同一概念出现多种译法：
+
+```json
+{
+    "Agent": "智能体",
+    "Workspace": "工作区",
+    "Artifact": "交付件"
 }
 ```
 
@@ -434,7 +438,14 @@ location.reload()
 copy(window.__agHanhuaDumpUntranslated())
 ```
 
-即可复制尚未命中的英文 UI 文本，然后补充到 `dicts/` 词典中。
+即可复制尚未命中的英文 UI 文本，然后按以下顺序处理：
+
+1. 先核对 `dicts/glossary.json`，避免术语冲突
+2. 固定文案补到对应页面词典
+3. 动态文本补到 `dicts/patterns.json`
+4. 品牌名、模型名、技术词补到 `dicts/ignored.json`
+
+更完整的收集与分类流程见 `UNTRANSLATED_REVIEW.md`。
 
 关闭调试模式：
 
@@ -485,6 +496,13 @@ python "AntigravityHanHua_GongJu.py" --install-dir "C:\Users\你的用户名\App
 - 不自然、不像产品界面的中文表述
 - 模型名、功能名、按钮文案不一致的问题
 
+如果希望借助 AI 提高润色效率，可先阅读：
+
+- `TRANSLATION_STYLE_GUIDE.md`
+- `UNTRANSLATED_REVIEW.md`
+- `QA_CHECKLIST.md`
+- `tools/generate_translation_candidates.py`
+
 ### 8）提示 Antigravity 仍在运行
 
 请先完全退出 Antigravity 后再执行安装或还原。若你刚关闭应用仍提示占用，可以稍等几秒后重试。
@@ -508,9 +526,11 @@ python "AntigravityHanHua_GongJu.py" --install-dir "C:\Users\你的用户名\App
 | 文件 | 说明 |
 | --- | --- |
 | `AntigravityHanHua_GongJu.py` | 核心逻辑：路径解析、备份、注入、还原、词典检查、环境诊断 |
-| `ZhuRu_HanHua.command` | macOS 安装入口 |
-| `QingChu_HanHua.command` | macOS 还原入口 |
-| `dicts/` | 翻译词典、正则模板和忽略词表 |
+| `dicts/` | 翻译词典、术语表、正则模板和忽略词表 |
+| `TRANSLATION_STYLE_GUIDE.md` | 汉化风格指南 |
+| `UNTRANSLATED_REVIEW.md` | 未翻译文本收集与处理流程 |
+| `QA_CHECKLIST.md` | 汉化质量验收清单 |
+| `tools/generate_translation_candidates.py` | 生成 AI 候选译文的辅助脚本 |
 | `.editorconfig` | 编辑器格式约定 |
 | `CONTRIBUTING.md` | 贡献说明 |
 | `SECURITY.md` | 安全问题反馈说明 |

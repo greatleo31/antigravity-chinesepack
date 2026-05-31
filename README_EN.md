@@ -17,7 +17,7 @@
 - **Not just a one-off script** — includes install/restore scripts, diagnostics, dictionary checks, workflows, templates, and contributor docs
 - **Supports two layout types** — legacy `resources/app` and modern `app.asar`
 - **Designed for public maintenance** — with changelog, release checklist, stage summary, and next-step planning
-- **Friendly for normal users** — ready-to-run scripts for Windows and macOS
+- **Friendly for normal users** — direct main-script usage is recommended, making troubleshooting easier
 - **Friendly for contributors** — issue templates, PR template, workflow checks, and documentation
 
 ## Quick start
@@ -78,15 +78,6 @@ or:
 python ./AntigravityHanHua_GongJu.py
 ```
 
-### Optional wrapper scripts
-
-The repo still includes:
-
-- `ZhuRu_HanHua.command`
-- `QingChu_HanHua.command`
-
-But if you hit compatibility issues, switch to the **direct main-script approach** above.
-
 ## Scope
 
 - Focused on **Antigravity Agent Manager** UI translation
@@ -116,8 +107,10 @@ But if you hit compatibility issues, switch to the **direct main-script approach
 - `NEXT_STEPS.md` — where the project can continue next
 - `COMPATIBILITY.md` — compatibility matrix
 - `PROJECT_INTRO.md` — reusable project intro / release copy
-- `CONTRIBUTING.md` — contribution guide
-- `SECURITY.md` — security reporting notes
+- `TRANSLATION_STYLE_GUIDE.md` — localization style guide
+- `UNTRANSLATED_REVIEW.md` — untranslated-text collection workflow
+- `QA_CHECKLIST.md` — translation quality checklist
+- `tools/generate_translation_candidates.py` — helper script for AI-assisted translation candidates
 
 ## Notes
 

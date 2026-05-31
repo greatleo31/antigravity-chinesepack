@@ -4,9 +4,15 @@
 
 ## Unreleased
 
-- 增加环境诊断命令，便于定位 Python、npx 与安装目录识别问题
-- 完善安装与还原失败时的诊断信息与协作反馈材料
-- 优化 README 首页结构、适用范围说明与常见问题编号
+### 汉化质量流程
+- 新增 `dicts/glossary.json`，用于统一核心术语
+- 新增 `TRANSLATION_STYLE_GUIDE.md`，统一汉化文案风格
+- 新增 `UNTRANSLATED_REVIEW.md`，固定未翻译文本收集与分类流程
+- 新增 `QA_CHECKLIST.md`，作为发布前质量验收清单
+- 新增 `tools/generate_translation_candidates.py`，用于生成 AI 候选译文并保留人工审核环节
+- 扩展 `dicts/patterns.json`，补充工作区、会话、知识条目、秒级倒计时与配额重置类动态文本规则
+- 继续润色 `dicts/page_settings.json` 中多处高频设置说明文案
+- 更新中英文 README，进一步强调直接运行主脚本，并补充术语表、收集流程与 AI 辅助翻译说明
 
 ## 2026-05
 

@@ -12,6 +12,18 @@
         "replace": "$1 个文件已修改"
     },
     {
+        "pattern": "^([0-9]+) workspaces?$",
+        "replace": "$1 个工作区"
+    },
+    {
+        "pattern": "^([0-9]+) conversations?$",
+        "replace": "$1 个会话"
+    },
+    {
+        "pattern": "^([0-9]+) knowledge items?$",
+        "replace": "$1 个知识条目"
+    },
+    {
         "pattern": "^Open workspace: (.+)$",
         "replace": "打开工作区：$1"
     },
@@ -28,6 +40,10 @@
         "replace": "模型配额将在 $1 后重置"
     },
     {
+        "pattern": "^Quota resets in (.+)$",
+        "replace": "配额将在 $1 后重置"
+    },
+    {
         "pattern": "^Refreshes in (.+)$",
         "replace": "$1 后刷新"
     },
@@ -42,6 +58,10 @@
     {
         "pattern": "^([0-9]+) minutes?$",
         "replace": "$1 分钟"
+    },
+    {
+        "pattern": "^([0-9]+) seconds?$",
+        "replace": "$1 秒"
     },
     {
         "pattern": "^Available AI credits: (.+)$",
