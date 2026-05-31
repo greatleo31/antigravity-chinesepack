@@ -337,6 +337,18 @@ python "AntigravityHanHua_GongJu.py" --install-dir "C:\Users\你的用户名\App
 
 请先完全退出 Antigravity 后再执行安装或还原。若你刚关闭应用仍提示占用，可以稍等几秒后重试。
 
+### 8）想反馈安装或还原失败
+
+建议在提 Issue 时一并附上：
+
+- Antigravity 版本
+- 系统平台
+- 使用的是安装还是还原脚本
+- 完整终端输出
+- 如方便，附截图
+
+这样会更容易快速定位问题。
+
 ---
 
 ## 文件说明
