@@ -3,20 +3,33 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 cd "$SCRIPT_DIR" || exit 1
 
 echo
-echo "[1/3] Detecting Antigravity process..."
+if ! command -v python3 >/dev/null 2>&1; then
+  echo "[错误] 未检测到 python3，请先安装 Python 3。"
+  echo
+  echo "Press Enter to exit..."
+  read -r _
+  exit 1
+fi
+
+echo "[1/3] 正在检测并关闭 Antigravity 进程..."
 osascript -e 'tell application "Antigravity" to quit' >/dev/null 2>&1 || true
 pkill -f "Antigravity" >/dev/null 2>&1 || true
 sleep 1
 
 echo
-echo "[2/3] Restoring Official Files..."
+echo "[2/3] 正在还原官方文件..."
 python3 "$SCRIPT_DIR/AntigravityHanHua_GongJu.py" --huifu "$@"
 status=$?
 
 echo
-echo "[3/3] Restoration Complete!"
-echo
-echo "[Note] Antigravity has been restored to its original state."
+if [ "$status" -ne 0 ]; then
+  echo "[3/3] 还原失败，请检查上方输出信息。"
+else
+  echo "[3/3] 还原完成。"
+  echo
+  echo "[提示] Antigravity 已恢复为官方原始状态。"
+fi
+
 echo
 echo "Press Enter to exit..."
 read -r _
