@@ -20,6 +20,8 @@
 2. 双击 `ZhuRu_HanHua.bat`
 3. 重新打开 Antigravity
 
+> 如果系统里没有 `python` 命令，但安装了 Python Launcher，脚本也会自动尝试使用 `py -3`。
+
 ### macOS
 
 1. 关闭 Antigravity
@@ -308,7 +310,11 @@ python "AntigravityHanHua_GongJu.py" --install-dir "C:\Users\你的用户名\App
 
 请先安装 Node.js，然后重新执行脚本。
 
-### 4）更新后汉化失效
+### 4）Windows 下提示找不到 Python，但你已经装过
+
+请优先尝试重新打开终端或重新登录系统。如果你的环境里只有 Python Launcher，当前脚本也会自动尝试使用 `py -3`。
+
+### 5）更新后汉化失效
 
 官方更新可能覆盖原文件，重新执行一次安装脚本即可。
 

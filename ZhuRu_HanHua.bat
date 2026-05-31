@@ -8,11 +8,18 @@ title Antigravity 中文语言包安装工具
 
 where python >nul 2>nul
 if errorlevel 1 (
-    echo.
-    echo [错误] 未检测到 Python，请先安装 Python 3 并确保已加入 PATH。
-    echo.
-    pause
-    exit /b 1
+    py -3 -V >nul 2>nul
+    if errorlevel 1 (
+        echo.
+        echo [错误] 未检测到 Python，请先安装 Python 3 并确保已加入 PATH。
+        echo.
+        pause
+        exit /b 1
+    ) else (
+        set "PYTHON_CMD=py -3"
+    )
+) else (
+    set "PYTHON_CMD=python"
 )
 
 echo.
@@ -22,7 +29,7 @@ timeout /t 2 /nobreak >nul
 
 echo.
 echo [2/3] 正在注入汉化核心...
-python "%~dp0AntigravityHanHua_GongJu.py" %*
+%PYTHON_CMD% "%~dp0AntigravityHanHua_GongJu.py" %*
 set "status=%errorlevel%"
 
 echo.
