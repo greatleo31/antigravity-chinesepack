@@ -348,6 +348,7 @@ python "AntigravityHanHua_GongJu.py" --install-dir "C:\Users\你的用户名\App
 | `CONTRIBUTING.md` | 贡献说明 |
 | `.github/` | Issue / PR 模板与词典检查工作流 |
 | `LICENSE` | 开源许可证 |
+| `CHANGELOG.md` | 更新日志 |
 
 ---
 
@@ -361,6 +362,7 @@ python "AntigravityHanHua_GongJu.py" --install-dir "C:\Users\你的用户名\App
 - 提交未翻译文本或术语优化建议
 - 提交 PR 一起完善汉化质量
 - 阅读 `CONTRIBUTING.md` 后参与协作
+- 通过 Issue 反馈兼容性问题、功能建议或翻译建议
 
 ---
 

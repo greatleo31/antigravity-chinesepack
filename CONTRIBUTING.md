@@ -18,13 +18,19 @@
 python "AntigravityHanHua_GongJu.py" --check-dicts
 ```
 
-2. 保持术语一致，例如：
+2. 如果改动了核心逻辑，建议同时运行：
+
+```bash
+python -m py_compile "AntigravityHanHua_GongJu.py"
+```
+
+3. 保持术语一致，例如：
    - Agent → 智能体
    - Workspace → 工作区
    - Conversation → 会话
    - Artifact → 交付件
 
-3. 避免以下问题：
+4. 避免以下问题：
    - 机翻腔太重
    - 同一词多种译法混用
    - 模型名、产品名被误翻
