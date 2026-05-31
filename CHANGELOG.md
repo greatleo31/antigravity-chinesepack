@@ -12,6 +12,8 @@
 - 新增 `tools/generate_translation_candidates.py`，用于生成 AI 候选译文并保留人工审核环节
 - 扩展 `dicts/patterns.json`，补充工作区、会话、知识条目、秒级倒计时与配额重置类动态文本规则
 - 继续润色 `dicts/page_settings.json` 中多处高频设置说明文案
+- 补强 `dicts/common.json` 与 `dicts/page_mcp_knowledge.json` 的通用状态、MCP 服务器和知识库相关文案
+- 清理设置页中 allow/deny list、Lint、浏览器与配额说明的术语和语气不一致问题
 - 更新中英文 README，进一步强调直接运行主脚本，并补充术语表、收集流程与 AI 辅助翻译说明
 
 ## 2026-05
