@@ -403,6 +403,7 @@ python "AntigravityHanHua_GongJu.py" --install-dir "C:\Users\你的用户名\App
 | `dicts/` | 翻译词典、正则模板和忽略词表 |
 | `CONTRIBUTING.md` | 贡献说明 |
 | `SECURITY.md` | 安全问题反馈说明 |
+| `RELEASE_CHECKLIST.md` | 阶段性发布自查清单 |
 | `.github/` | Issue / PR 模板与词典检查工作流 |
 | `LICENSE` | 开源许可证 |
 | `CHANGELOG.md` | 更新日志 |
