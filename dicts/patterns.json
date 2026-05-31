@@ -24,6 +24,14 @@
         "replace": "$1 个知识条目"
     },
     {
+        "pattern": "^([0-9]+) skills?$",
+        "replace": "$1 个技能"
+    },
+    {
+        "pattern": "^([0-9]+) models?$",
+        "replace": "$1 个模型"
+    },
+    {
         "pattern": "^Open workspace: (.+)$",
         "replace": "打开工作区：$1"
     },
@@ -46,6 +54,10 @@
     {
         "pattern": "^Refreshes in (.+)$",
         "replace": "$1 后刷新"
+    },
+    {
+        "pattern": "^Loading (.+)\\.\\.\\.$",
+        "replace": "正在加载 $1..."
     },
     {
         "pattern": "^([0-9]+) days?$",

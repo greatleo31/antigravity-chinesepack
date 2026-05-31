@@ -24,5 +24,5 @@
     "No subagents": "暂无子智能体",
     "No active skills": "暂无活跃技能",
     "Agent Auto-Fix Lints": "智能体自动修复 Lint 错误",
-    "When enabled, agent is given awareness of lint errors created by its edits and may fix them without explicit user prompting.": "启用后，智能体能够感知其编辑产生的 Lint 错误，并可能在无需用户明确提示的情况下自动修复。"
+    "When enabled, agent is given awareness of lint errors created by its edits and may fix them without explicit user prompting.": "启用后，智能体能够识别自己修改产生的 Lint 错误，并可能在无需您明确提示的情况下自动修复。"
 }

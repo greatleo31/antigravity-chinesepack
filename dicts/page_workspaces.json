@@ -3,5 +3,5 @@
     "Failed to load conversation": "加载对话失败",
     "Failed to delete conversation": "删除对话失败",
     "Conversation History": "对话历史",
-    "When enabled, this agent will be able to access past conversations to inform its responses.": "启用后，此智能体可以访问过去的对话记录，并将其作为生成响应的参考。"
+    "When enabled, this agent will be able to access past conversations to inform its responses.": "启用后，智能体可以参考过去的对话记录来生成更贴合上下文的回复。"
 }
