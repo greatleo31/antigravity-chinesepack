@@ -60,6 +60,14 @@ chmod +x "ZhuRu_HanHua.command" "QingChu_HanHua.command"
   - 长文案漏翻或术语不统一
   - 不同系统、不同安装环境下的安装成功率问题
 
+## 已知限制
+
+- 该项目主要覆盖 **Agent Manager** 相关界面，不保证 Antigravity 其他所有页面都已完整汉化。
+- 如果官方更新了前端结构、HTML 路径、`preload.js` 位置或打包方式，可能需要更新脚本后才能继续使用。
+- 动态文本、第三方扩展界面、模型返回内容不一定都能被词典覆盖。
+- `app.asar` 注入依赖本机 `Node.js/npm` 与 `npx @electron/asar` 可用。
+- 在极少数情况下，长文案虽然已做模糊匹配，但如果官方文本改动过大，仍可能需要补词典或调整规则。
+
 ---
 
 ## 项目简介
@@ -395,7 +403,7 @@ python "AntigravityHanHua_GongJu.py" --install-dir "C:\Users\你的用户名\App
 
 | 文件 | 说明 |
 | --- | --- |
-| `AntigravityHanHua_GongJu.py` | 核心逻辑：路径解析、备份、注入、还原、词典检查 |
+| `AntigravityHanHua_GongJu.py` | 核心逻辑：路径解析、备份、注入、还原、词典检查、环境诊断 |
 | `ZhuRu_HanHua.bat` | Windows 安装入口 |
 | `QingChu_HanHua.bat` | Windows 还原入口 |
 | `ZhuRu_HanHua.command` | macOS 安装入口 |
