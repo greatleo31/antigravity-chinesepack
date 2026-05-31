@@ -413,6 +413,7 @@ python "AntigravityHanHua_GongJu.py" --install-dir "C:\Users\你的用户名\App
 | `SECURITY.md` | 安全问题反馈说明 |
 | `RELEASE_CHECKLIST.md` | 阶段性发布自查清单 |
 | `STAGE_SUMMARY.md` | 当前阶段成果总结 |
+| `NEXT_STEPS.md` | 下一阶段优化方向 |
 | `.github/` | Issue / PR 模板与词典检查工作流 |
 | `LICENSE` | 开源许可证 |
 | `CHANGELOG.md` | 更新日志 |
@@ -436,6 +437,8 @@ python "AntigravityHanHua_GongJu.py" --install-dir "C:\Users\你的用户名\App
 
 - `README.md`：安装、诊断、常见问题
 - `CHANGELOG.md`：近期更新与演进方向
+- `STAGE_SUMMARY.md`：当前阶段已完成到什么程度
+- `NEXT_STEPS.md`：后续还可以继续优化什么
 - `.github/workflows/check-dicts.yml`：当前自动化检查能力
 
 ---
