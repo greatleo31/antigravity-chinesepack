@@ -333,6 +333,10 @@ python "AntigravityHanHua_GongJu.py" --install-dir "C:\Users\你的用户名\App
 - 不自然、不像产品界面的中文表述
 - 模型名、功能名、按钮文案不一致的问题
 
+### 7）提示 Antigravity 仍在运行
+
+请先完全退出 Antigravity 后再执行安装或还原。若你刚关闭应用仍提示占用，可以稍等几秒后重试。
+
 ---
 
 ## 文件说明

@@ -14,6 +14,7 @@
 - 扩展属性翻译覆盖：`placeholder`、`title`、`aria-label`、`aria-description`、`aria-placeholder`、`alt`、`data-tooltip`、`data-title`
 - 增强 Windows 下 Python 启动兼容性，支持 `python` 与 `py -3`
 - 增强 macOS 启动脚本兼容性，支持 `python3` 与 `python`
+- 安装和还原前主动检测 Antigravity 是否仍在运行，减少占用导致的失败
 
 ### 词典与文案
 - 统一设置页、导航页、智能体页、知识页核心术语

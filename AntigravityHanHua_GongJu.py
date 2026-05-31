@@ -575,6 +575,36 @@ def restore_asar(install_dir):
     return True
 
 
+def is_app_running():
+    if os.name == "nt":
+        completed = subprocess.run(
+            ["tasklist", "/FI", "IMAGENAME eq Antigravity.exe"],
+            text=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
+        )
+        output = completed.stdout or ""
+        return "Antigravity.exe" in output
+
+    commands = [
+        ["pgrep", "-f", "Antigravity"],
+        ["osascript", "-e", 'tell application "System Events" to (name of processes) contains "Antigravity"'],
+    ]
+    for args in commands:
+        completed = subprocess.run(args, text=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+        output = (completed.stdout or "").strip().lower()
+        if args[0] == "pgrep" and completed.returncode == 0 and output:
+            return True
+        if args[0] == "osascript" and "true" in output:
+            return True
+    return False
+
+
+def check_app_not_running():
+    if is_app_running():
+        raise RuntimeError("检测到 Antigravity 仍在运行。请先完全退出应用后再执行安装或还原。")
+
+
 def check_dicts():
     exact_map, patterns, ignored, issues = load_translation_assets()
     errors = [issue for issue in issues if issue.level == "ERROR"]
@@ -598,6 +628,7 @@ def check_dicts():
 def install(install_dir):
     print("====== Antigravity 汉化注入工具 ======")
     print(f"[路径] 安装目录: {install_dir}")
+    check_app_not_running()
     if is_legacy_layout(install_dir):
         install_legacy(install_dir)
     elif is_asar_layout(install_dir):
@@ -610,6 +641,7 @@ def install(install_dir):
 def restore(install_dir):
     print("====== 正在恢复 Antigravity 官方原版 ======")
     print(f"[路径] 安装目录: {install_dir}")
+    check_app_not_running()
     changed = False
     if is_legacy_layout(install_dir):
         changed = restore_legacy(install_dir) or changed
