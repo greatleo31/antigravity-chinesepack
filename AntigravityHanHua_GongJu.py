@@ -132,8 +132,9 @@ def load_translation_assets(strict=False):
             exact_map[norm_key] = value
 
     for key, files in seen_keys.items():
-        if len(files) > 1:
-            issues.append(DictIssue("INFO", f"{key!r} 重复出现于：{', '.join(files)}"))
+        unique_files = sorted(set(files))
+        if len(files) > 1 and len(unique_files) == 1:
+            issues.append(DictIssue("INFO", f"{key!r} 在同一词典中存在归一化后重复条目：{unique_files[0]}"))
 
     if strict and any(issue.level == "ERROR" for issue in issues):
         raise RuntimeError("词典存在错误，请先执行 --check-dicts 查看详情。")
