@@ -43,6 +43,18 @@ chmod +x "ZhuRu_HanHua.command" "QingChu_HanHua.command"
 
 ---
 
+## 适用范围与说明
+
+- 适用于 **Antigravity Agent Manager** 界面的中文汉化
+- 支持 **Windows / macOS**
+- 同时兼容：
+  - 旧版 `resources/app` 布局
+  - 新版 `app.asar` 布局
+- 默认尽量不直接修改核心二进制结构，而是通过可回滚方式注入
+- 如果官方更新了前端结构，可能需要重新执行脚本或补充词典
+
+---
+
 ## 项目简介
 
 本项目用于给 Antigravity 的 **Agent Manager** 界面做中文汉化。
@@ -354,11 +366,11 @@ python "AntigravityHanHua_GongJu.py" --install-dir "C:\Users\你的用户名\App
 - 不自然、不像产品界面的中文表述
 - 模型名、功能名、按钮文案不一致的问题
 
-### 7）提示 Antigravity 仍在运行
+### 8）提示 Antigravity 仍在运行
 
 请先完全退出 Antigravity 后再执行安装或还原。若你刚关闭应用仍提示占用，可以稍等几秒后重试。
 
-### 8）想反馈安装或还原失败
+### 9）想反馈安装或还原失败
 
 建议在提 Issue 时一并附上：
 
