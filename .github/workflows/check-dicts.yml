@@ -1,0 +1,24 @@
+name: Check dictionaries
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check-dicts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Verify Python script syntax
+        run: python -m py_compile AntigravityHanHua_GongJu.py
+
+      - name: Run dictionary checks
+        run: python AntigravityHanHua_GongJu.py --check-dicts

@@ -3,6 +3,8 @@
 [![GitHub Repo stars](https://img.shields.io/github/stars/greatleo31/antigravity-chinesepack?style=flat-square)](https://github.com/greatleo31/antigravity-chinesepack/stargazers)
 [![GitHub issues](https://img.shields.io/github/issues/greatleo31/antigravity-chinesepack?style=flat-square)](https://github.com/greatleo31/antigravity-chinesepack/issues)
 [![GitHub last commit](https://img.shields.io/github/last-commit/greatleo31/antigravity-chinesepack?style=flat-square)](https://github.com/greatleo31/antigravity-chinesepack/commits/main)
+[![Check dictionaries](https://img.shields.io/github/actions/workflow/status/greatleo31/antigravity-chinesepack/check-dicts.yml?branch=main&style=flat-square)](https://github.com/greatleo31/antigravity-chinesepack/actions/workflows/check-dicts.yml)
+[![License](https://img.shields.io/github/license/greatleo31/antigravity-chinesepack?style=flat-square)](./LICENSE)
 
 > 适用对象：Antigravity Agent Manager  
 > 支持平台：Windows / macOS  
@@ -336,7 +338,8 @@ python "AntigravityHanHua_GongJu.py" --install-dir "C:\Users\你的用户名\App
 | `QingChu_HanHua.command` | macOS 还原入口 |
 | `dicts/` | 翻译词典、正则模板和忽略词表 |
 | `CONTRIBUTING.md` | 贡献说明 |
-| `.github/` | Issue / PR 模板 |
+| `.github/` | Issue / PR 模板与词典检查工作流 |
+| `LICENSE` | 开源许可证 |
 
 ---
 
