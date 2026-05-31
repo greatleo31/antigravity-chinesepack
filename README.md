@@ -9,6 +9,9 @@
 > 适用对象：Antigravity Agent Manager  
 > 支持平台：Windows / macOS  
 > 方案特点：动态注入、自动备份、一键还原、词典校验、未翻译文本收集
+>
+> **这是一个面向普通用户也能直接使用的 Antigravity 中文语言包项目。**  
+> 目标是：安装更简单、汉化更自然、出错更容易定位、协作更方便。
 
 ---
 
@@ -52,6 +55,10 @@ chmod +x "ZhuRu_HanHua.command" "QingChu_HanHua.command"
   - 新版 `app.asar` 布局
 - 默认尽量不直接修改核心二进制结构，而是通过可回滚方式注入
 - 如果官方更新了前端结构，可能需要重新执行脚本或补充词典
+- 本项目主要解决：
+  - 界面英文较多、不方便日常使用
+  - 长文案漏翻或术语不统一
+  - 不同系统、不同安装环境下的安装成功率问题
 
 ---
 
@@ -414,6 +421,12 @@ python "AntigravityHanHua_GongJu.py" --install-dir "C:\Users\你的用户名\App
 - 阅读 `CONTRIBUTING.md` 后参与协作
 - 通过 Issue 反馈兼容性问题、功能建议或翻译建议
 - 遇到潜在安全问题时，优先参考 `SECURITY.md`
+
+如果你只是想快速判断这个项目值不值得继续关注，可以优先看：
+
+- `README.md`：安装、诊断、常见问题
+- `CHANGELOG.md`：近期更新与演进方向
+- `.github/workflows/check-dicts.yml`：当前自动化检查能力
 
 ---
 
