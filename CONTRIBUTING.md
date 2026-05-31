@@ -36,6 +36,10 @@ python -m py_compile "AntigravityHanHua_GongJu.py"
    - 模型名、产品名被误翻
    - 长文案只在单一空格/换行情况下才能命中
 
+5. 提交前建议遵循仓库里的格式约定：
+   - 行尾与换行规则参考 `.gitattributes`
+   - 编辑器格式建议参考 `.editorconfig`
+
 ## 建议提交流程
 
 - 小改动：直接提 PR

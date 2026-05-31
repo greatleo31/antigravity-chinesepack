@@ -409,6 +409,7 @@ python "AntigravityHanHua_GongJu.py" --install-dir "C:\Users\你的用户名\App
 | `ZhuRu_HanHua.command` | macOS 安装入口 |
 | `QingChu_HanHua.command` | macOS 还原入口 |
 | `dicts/` | 翻译词典、正则模板和忽略词表 |
+| `.editorconfig` | 编辑器格式约定 |
 | `CONTRIBUTING.md` | 贡献说明 |
 | `SECURITY.md` | 安全问题反馈说明 |
 | `RELEASE_CHECKLIST.md` | 阶段性发布自查清单 |
