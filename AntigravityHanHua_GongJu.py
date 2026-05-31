@@ -628,6 +628,7 @@ def check_dicts():
 def install(install_dir):
     print("====== Antigravity 汉化注入工具 ======")
     print(f"[路径] 安装目录: {install_dir}")
+    print("[提示] 请先完全退出 Antigravity 后再继续。")
     check_app_not_running()
     if is_legacy_layout(install_dir):
         install_legacy(install_dir)
@@ -641,6 +642,7 @@ def install(install_dir):
 def restore(install_dir):
     print("====== 正在恢复 Antigravity 官方原版 ======")
     print(f"[路径] 安装目录: {install_dir}")
+    print("[提示] 请先完全退出 Antigravity 后再继续。")
     check_app_not_running()
     changed = False
     if is_legacy_layout(install_dir):
