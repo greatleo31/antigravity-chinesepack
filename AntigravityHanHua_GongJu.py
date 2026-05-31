@@ -276,7 +276,7 @@ def build_injection_js():
                 if (BLOCKED_TAGS.includes(tag)) return;
 
                 if (!isBlocked(node) && node.nodeType === Node.ELEMENT_NODE) {{
-                    for (const attr of ['placeholder', 'title', 'aria-label', 'alt', 'data-tooltip']) translateAttr(node, attr);
+                    for (const attr of ['placeholder', 'title', 'aria-label', 'aria-description', 'aria-placeholder', 'alt', 'data-tooltip', 'data-title']) translateAttr(node, attr);
                 }}
 
                 if (node.shadowRoot) translateNode(node.shadowRoot);

@@ -1,8 +1,39 @@
 # Antigravity 智能管理器中文语言包
 
+[![GitHub Repo stars](https://img.shields.io/github/stars/greatleo31/antigravity-chinesepack?style=flat-square)](https://github.com/greatleo31/antigravity-chinesepack/stargazers)
+[![GitHub issues](https://img.shields.io/github/issues/greatleo31/antigravity-chinesepack?style=flat-square)](https://github.com/greatleo31/antigravity-chinesepack/issues)
+[![GitHub last commit](https://img.shields.io/github/last-commit/greatleo31/antigravity-chinesepack?style=flat-square)](https://github.com/greatleo31/antigravity-chinesepack/commits/main)
+
 > 适用对象：Antigravity Agent Manager  
 > 支持平台：Windows / macOS  
 > 方案特点：动态注入、自动备份、一键还原、词典校验、未翻译文本收集
+
+---
+
+## 快速开始
+
+### Windows
+
+1. 关闭 Antigravity
+2. 双击 `ZhuRu_HanHua.bat`
+3. 重新打开 Antigravity
+
+### macOS
+
+1. 关闭 Antigravity
+2. 首次执行前先运行：
+
+```bash
+chmod +x "ZhuRu_HanHua.command" "QingChu_HanHua.command"
+```
+
+3. 然后执行：
+
+```bash
+./ZhuRu_HanHua.command
+```
+
+4. 重新打开 Antigravity
 
 ---
 
