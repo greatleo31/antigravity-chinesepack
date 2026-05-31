@@ -605,6 +605,68 @@ def check_app_not_running():
         raise RuntimeError("检测到 Antigravity 仍在运行。请先完全退出应用后再执行安装或还原。")
 
 
+def get_command_path(name):
+    return shutil.which(name)
+
+
+def collect_install_diagnostics(path=None):
+    results = []
+    for candidate in candidate_install_dirs(path):
+        exists = os.path.isdir(candidate)
+        legacy = exists and is_legacy_layout(candidate)
+        asar = exists and is_asar_layout(candidate)
+        results.append({
+            "path": candidate,
+            "exists": exists,
+            "legacy": legacy,
+            "asar": asar,
+            "matched": legacy or asar,
+        })
+    return results
+
+
+def diagnose(path=None):
+    print("====== Antigravity 汉化环境诊断 ======")
+    print(f"[脚本目录] {SCRIPT_DIR}")
+    print(f"[Python] {sys.executable}")
+    print(f"[python] {get_command_path('python') or '未找到'}")
+    print(f"[python3] {get_command_path('python3') or '未找到'}")
+    print(f"[py] {get_command_path('py') or '未找到'}")
+    print(f"[npx] {get_command_path('npx.cmd') or get_command_path('npx') or '未找到'}")
+    print()
+    print("[候选安装目录]")
+    for item in collect_install_diagnostics(path):
+        flags = []
+        if item["exists"]:
+            flags.append("目录存在")
+        if item["legacy"]:
+            flags.append("旧版 resources/app 布局")
+        if item["asar"]:
+            flags.append("新版 app.asar 布局")
+        if item["matched"]:
+            flags.append("可用于安装")
+        if not flags:
+            flags.append("未命中")
+        print(f"- {item['path']}")
+        print(f"  -> {'，'.join(flags)}")
+
+    install_dir = install_dir_from_args(path)
+    print()
+    print(f"[最终识别安装目录] {install_dir}")
+    if os.path.isdir(install_dir):
+        print("[状态] 安装目录存在")
+    else:
+        print("[状态] 安装目录不存在")
+    if os.path.isdir(install_dir) and is_legacy_layout(install_dir):
+        print("[布局] 旧版 resources/app")
+    elif os.path.isdir(install_dir) and is_asar_layout(install_dir):
+        print("[布局] 新版 app.asar")
+    else:
+        print("[布局] 未识别")
+    print("[√] 诊断完成。")
+    return 0
+
+
 def check_dicts():
     exact_map, patterns, ignored, issues = load_translation_assets()
     errors = [issue for issue in issues if issue.level == "ERROR"]
@@ -660,10 +722,13 @@ def main():
     parser.add_argument("--install-dir", default=None, help="Antigravity 安装目录、resources 目录或 app.asar 所在目录")
     parser.add_argument("--huifu", action="store_true", help="恢复官方原版")
     parser.add_argument("--check-dicts", action="store_true", help="检查词典 JSON、重复 key 和正则模板")
+    parser.add_argument("--diagnose", action="store_true", help="诊断 Python、npx 和 Antigravity 安装目录识别结果")
     args = parser.parse_args()
 
     if args.check_dicts:
         sys.exit(check_dicts())
+    if args.diagnose:
+        sys.exit(diagnose(args.install_dir))
 
     install_dir = install_dir_from_args(args.install_dir)
     if not os.path.isdir(install_dir):

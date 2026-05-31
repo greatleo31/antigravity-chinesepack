@@ -211,6 +211,27 @@ python "AntigravityHanHua_GongJu.py" --check-dicts
 - 是否存在重复 key
 - 正则模板是否能正常编译
 
+## 环境诊断
+
+如果你不确定脚本识别到了哪个安装目录，或者怀疑 Python / npx 环境有问题，可以执行：
+
+```bash
+python "AntigravityHanHua_GongJu.py" --diagnose
+```
+
+如果需要手动指定路径一起诊断：
+
+```bash
+python "AntigravityHanHua_GongJu.py" --diagnose --install-dir "D:\Antigravity"
+```
+
+该命令会输出：
+
+- 当前 Python 路径
+- `python` / `python3` / `py` / `npx` 是否可用
+- 自动探测到的候选安装目录
+- 最终识别出的安装目录与布局类型
+
 ---
 
 ## 词典结构
